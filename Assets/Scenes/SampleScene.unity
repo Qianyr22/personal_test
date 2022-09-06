@@ -3446,6 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1540852346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4775,7 +4776,7 @@ GameObject:
   - component: {fileID: 1980772989}
   - component: {fileID: 1980772988}
   m_Layer: 0
-  m_Name: player
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4794,6 +4795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  stamina: 20
 --- !u!212 &1980772986
 SpriteRenderer:
   m_ObjectHideFlags: 0
