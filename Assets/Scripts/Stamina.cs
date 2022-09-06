@@ -18,6 +18,6 @@ public class Stamina : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Stamina: " + string.Format("{0:0.00}", player.stamina);
+        text.text = "Stamina: " + string.Format("{0:0.00}", player.stamina <= 0 ? "GG": player.stamina);
     }
 }

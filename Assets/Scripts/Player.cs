@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float speed=5.0f;
     public float stamina = 20.0f;
+    public bool GG = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,22 +16,34 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            transform.Translate(-speed * Time.deltaTime, 0, 0);
-            stamina -= speed * Time.deltaTime; 
+    {   
+        if(!GG) {
+            if(Input.GetKey(KeyCode.LeftArrow)){
+                transform.Translate(-speed * Time.deltaTime, 0, 0);
+                stamina -= 0.1f * speed * Time.deltaTime;
+                checkGG();
+            }
+            if(Input.GetKey(KeyCode.RightArrow)){
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+                stamina -= 0.1f * speed * Time.deltaTime;
+                checkGG();
+            }
+            if(Input.GetKey(KeyCode.UpArrow)){
+                transform.Translate(0, speed * Time.deltaTime, 0);
+                stamina -= 0.1f * speed * Time.deltaTime;
+                checkGG();
+            }
+            if(Input.GetKey(KeyCode.DownArrow)){
+                transform.Translate(0, -speed * Time.deltaTime, 0);
+                stamina -= 0.1f * speed * Time.deltaTime;
+                checkGG();
+            }
         }
-        if(Input.GetKey(KeyCode.RightArrow)){
-            transform.Translate(speed * Time.deltaTime, 0, 0);
-            stamina -= speed * Time.deltaTime; 
-        }
-        if(Input.GetKey(KeyCode.UpArrow)){
-            transform.Translate(0, speed * Time.deltaTime, 0);
-            stamina -= speed * Time.deltaTime; 
-        }
-        if(Input.GetKey(KeyCode.DownArrow)){
-            transform.Translate(0, -speed * Time.deltaTime, 0);
-            stamina -= speed * Time.deltaTime; 
+    }
+
+    private void checkGG() {
+        if(stamina <= 0) {
+            GG = true;
         }
     }
 
