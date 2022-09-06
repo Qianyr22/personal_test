@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed=5.0f;
+    public float stamina = 20.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +18,20 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.LeftArrow)){
             transform.Translate(-speed * Time.deltaTime, 0, 0);
+            stamina -= speed * Time.deltaTime; 
         }
         if(Input.GetKey(KeyCode.RightArrow)){
             transform.Translate(speed * Time.deltaTime, 0, 0);
+            stamina -= speed * Time.deltaTime; 
         }
         if(Input.GetKey(KeyCode.UpArrow)){
             transform.Translate(0, speed * Time.deltaTime, 0);
+            stamina -= speed * Time.deltaTime; 
         }
         if(Input.GetKey(KeyCode.DownArrow)){
             transform.Translate(0, -speed * Time.deltaTime, 0);
-        }        
+            stamina -= speed * Time.deltaTime; 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
