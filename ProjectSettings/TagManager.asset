@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walls
+  - Stamina
   layers:
   - Default
   - TransparentFX
