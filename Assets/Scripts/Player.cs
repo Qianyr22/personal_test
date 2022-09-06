@@ -20,22 +20,22 @@ public class Player : MonoBehaviour
         if(!GG) {
             if(Input.GetKey(KeyCode.LeftArrow)){
                 transform.Translate(-speed * Time.deltaTime, 0, 0);
-                stamina -= speed * Time.deltaTime;
+                stamina -= 0.1f * speed * Time.deltaTime;
                 checkGG();
             }
             if(Input.GetKey(KeyCode.RightArrow)){
                 transform.Translate(speed * Time.deltaTime, 0, 0);
-                stamina -= speed * Time.deltaTime;
+                stamina -= 0.1f * speed * Time.deltaTime;
                 checkGG();
             }
             if(Input.GetKey(KeyCode.UpArrow)){
                 transform.Translate(0, speed * Time.deltaTime, 0);
-                stamina -= speed * Time.deltaTime;
+                stamina -= 0.1f * speed * Time.deltaTime;
                 checkGG();
             }
             if(Input.GetKey(KeyCode.DownArrow)){
                 transform.Translate(0, -speed * Time.deltaTime, 0);
-                stamina -= speed * Time.deltaTime;
+                stamina -= 0.1f * speed * Time.deltaTime;
                 checkGG();
             }
         }
