@@ -3,19 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Walls
-  - Stamina
-  - Enemys
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundLayer
   - Water
   - UI
-  - ForOfWarMain
-  - ForOfWarSecondary
+  - DeadCheckLayer
+  - 
   - 
   - 
   - 
@@ -41,9 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3682526559
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: FogOfWar
-    uniqueID: 4238665925
+  - name: Player
+    uniqueID: 3814588953
+    locked: 0
+  - name: Mask
+    uniqueID: 2347747551
     locked: 0
